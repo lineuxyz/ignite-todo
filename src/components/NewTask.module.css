@@ -1,0 +1,65 @@
+.newTask {
+  width: 100%;
+  margin-top: -3.875rem;
+}
+
+.newTask form {
+  display: grid;
+  grid-template-columns: 37.875rem 1fr;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .newTask form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newTask textarea {
+  background: var(--gray-500);
+  color: var(--gray-300);
+  border-radius: 8px;
+  resize: none;
+  border: none;
+  height: 3.375rem;
+  padding: 1rem;
+  line-height: 1.4;
+}
+
+::placeholder {
+  color: var(--gray-300);
+  opacity: 1;
+}
+
+.newTask button[type='submit'] {
+  background: var(--blue-dark);
+  color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.5s;
+}
+
+.newTask button[type='submit']:not(:disabled):hover {
+  background: var(--blue);
+}
+
+.newTask button[type='submit']:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.newTask button svg {
+  margin-left: 0.5rem;
+}
